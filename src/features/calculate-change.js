@@ -15,6 +15,6 @@ export const getChangeFunctional = (changeDue) => {
         denomination['number'] = Math.floor(reducedAmount / denomination['what']);
         reducedAmount = reducedAmount - (denomination['number'] * denomination['what']);
         return reducedAmount.toFixed(2);
-    }, changeDue.toFixed(2));
+    }, changeDue.toFixed(2) * 1);
     return mapValues(denominationsClone, (obj) => obj.number);
 }
