@@ -3,15 +3,12 @@ import { Badge, Alert } from 'reactstrap';
 import {getChangeFunctional} from './calculate-change';
 import {map} from 'lodash';
 
-
 /**
  * generates uuid 
  */
 const uuid = () => Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1)) + 1;
 
-
-const ChangeDue = ({changeDue}) => {
-    
+const ChangeDue = ({changeDue}) => {    
     const renderChangeDenominations = (denominations) => {
         return (
             <div>
@@ -19,8 +16,8 @@ const ChangeDue = ({changeDue}) => {
                 <div>
                 {map(denominations, (valueOfDenomination, nameOfDenomination) => {
                     return (
-                        <div className="denominations" key={uuid()}>
-                            <Badge size="lg" color="ligth" key={nameOfDenomination + valueOfDenomination}>
+                        <div className="denominations" key={nameOfDenomination + uuid()}>
+                            <Badge size="lg" color="light">
                                 {nameOfDenomination} <Badge pill color="light">{valueOfDenomination}</Badge>
                             </Badge>
                         </div>
