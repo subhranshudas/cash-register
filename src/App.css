@@ -1,0 +1,17 @@
+.cash-register{
+  position: absolute;
+  top:20%;
+  left:30%;
+  right: 30%;
+}
+.change-due-container{
+  margin-top: 1.5rem;
+}
+.change-due-container .alert{
+  text-align: center;
+}
+.denominations{
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
